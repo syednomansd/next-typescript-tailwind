@@ -24,3 +24,7 @@ a {
     background: black;
   }
 }
+
+button {
+  font-size: 50px;
+}
