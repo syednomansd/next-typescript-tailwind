@@ -1,0 +1,69 @@
+html {
+  @apply box-border overflow-x-hidden;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  @apply bg-secondary font-roboto m-0 relative text-body-featured;
+  min-height: 100vh;
+}
+
+h1 {
+  @apply text-primary text-h1-mobile font-bold pb-12 leading-34 font-roboto;
+  @mixin r-between {
+    @apply text-h1 pb-h1 leading-58;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+input,
+select {
+  @apply bg-white text-regular pl-8 py-8 font-medium w-full;
+  border-radius: 3px;
+}
+
+select:invalid {
+  @apply text-placeholder;
+}
+
+option[value=''][disabled] {
+  @apply hidden;
+}
+
+option {
+  @apply text-spk-dark text-body;
+}
+
+li {
+  @apply list-none text-left;
+  label {
+    @apply text-spk-dark font-medium block leading-16 text-body mb-4;
+    @mixin r-between {
+      @apply mb-8 leading-18 text-medium;
+    }
+  }
+  input {
+    @apply border-2 border-solid border-white text-medium px-8 py-6 leading-18 font-normal;
+  }
+  input.disabled {
+    @apply bg-border-grey border-2 border-solid border-border-grey cursor-not-allowed;
+  }
+  &.error {
+    input {
+      @apply border-2 border-solid border-error;
+    }
+    span {
+      @apply text-error text-regular;
+    }
+  }
+}

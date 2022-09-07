@@ -1,0 +1,15 @@
+@import './breakpoints.scss';
+.wrapper {
+  @apply px-8 mx-auto my-0;
+  @mixin r-laptop {
+    max-width: 140rem;
+  }
+  @mixin r-desktop-large {
+    @apply px-0;
+  }
+}
+@mixin r-between {
+  main {
+    min-height: calc(100vh - 100px - 74px);
+  }
+}

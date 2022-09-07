@@ -1,0 +1,71 @@
+button {
+  @apply bg-light-blue text-white rounded-full outline-none flex justify-center items-center py-8 leading-18 font-medium text-body px-32;
+  @mixin r-between {
+    @apply text-body-featured;
+  }
+  &:focus {
+    @apply outline-none;
+  }
+  &:hover,
+  &:active {
+    &:not([disabled]) {
+      @apply bg-light-blue;
+    }
+  }
+  &:disabled {
+    @apply text-opacity-50 cursor-not-allowed;
+  }
+  &.full {
+    @apply w-full;
+  }
+  &.light {
+    @apply bg-light-blue;
+    &:hover,
+    &:active {
+      &:not([disabled]) {
+        @apply bg-primary;
+      }
+    }
+  }
+  &.danger {
+    @apply bg-error;
+    &:hover,
+    &:active {
+      &:not([disabled]) {
+        @apply bg-primary;
+      }
+    }
+  }
+  &.outline {
+    @apply bg-transparent text-primary border-solid border-primary border-2;
+    &:hover,
+    &:active {
+      &:not([disabled]) {
+        @apply text-light-blue border-light-blue bg-transparent;
+      }
+    }
+    &.danger {
+      @apply border-error text-error;
+      &:hover,
+      &:active {
+        &:not([disabled]) {
+          @apply bg-transparent text-primary border-primary;
+        }
+      }
+    }
+    &.light {
+      @apply border-light-blue text-light-blue;
+      &:hover,
+      &:active {
+        &:not([disabled]) {
+          @apply bg-transparent text-primary border-primary;
+        }
+      }
+    }
+  }
+  img {
+    @apply mr-4;
+    width: 2rem;
+    height: 2rem;
+  }
+}

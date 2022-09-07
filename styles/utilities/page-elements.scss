@@ -1,0 +1,70 @@
+.blue-heading {
+  @apply font-medium text-regular text-primary uppercase pb-4;
+  letter-spacing: 0.84px;
+  @mixin r-between {
+    @apply font-bold pb-12 leading-18;
+    letter-spacing: 1.12px;
+  }
+}
+
+.subheading {
+  @apply text-small pb-4 font-medium;
+  @mixin r-between {
+    @apply pb-8 text-medium;
+  }
+  &.large {
+    @apply text-body leading-18;
+    @mixin r-between {
+      @apply text-leading leading-34;
+    }
+  }
+}
+
+.leading-paragraph {
+  @apply text-spk-muted text-body leading-20;
+  @mixin r-between {
+    @apply leading-34 text-leading;
+  }
+}
+
+.page-content {
+  @apply pt-12;
+  @mixin r-between {
+    @apply pt-32;
+  }
+}
+
+.blue-subheading {
+  @apply text-body-featured leading-18 text-primary font-medium pb-12;
+}
+
+.ctp-pagination {
+  @apply flex items-center justify-center mb-32 mt-6;
+  @mixin r-between {
+    @apply pt-20 pb-0 pl-0 pr-0;
+  }
+  .pages {
+    @apply flex items-center justify-center mx-12;
+  }
+  div.item {
+    @apply text-black no-underline text-regular cursor-pointer;
+    padding: 0.8rem 1.6rem;
+    color: #aeb9be;
+    &:hover {
+      @apply text-primary;
+    }
+    @mixin r-between {
+      @apply text-body-featured;
+    }
+    &.active {
+      @apply text-primary;
+    }
+  }
+}
+
+.label {
+  @apply text-regular font-medium leading-18 pb-4;
+  @mixin r-between {
+    @apply text-medium pb-8;
+  }
+}

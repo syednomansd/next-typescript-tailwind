@@ -1,0 +1,15 @@
+html {
+  @apply font-noto-sans box-border h-full;
+  -webkit-font-smoothing: antialiased;
+  font-size: 62.5%;
+}
+
+body {
+  @apply bg-secondary h-full;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
